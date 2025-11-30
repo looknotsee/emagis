@@ -7,7 +7,7 @@
 }
 
 .titled-pane {
-    -fx-background-color: transparent;
+    -fx-background-color: "#00008b";
     -fx-border-color:  transparent;
     -fx-background-insets: 0;
     -fx-padding: 0;
@@ -18,7 +18,6 @@
     -fx-background-insets: 0;
     -fx-padding: 0;
 }
-
 
 .text-field-title {
     -fx-text-fill: white;
@@ -50,8 +49,13 @@
     -fx-background-color: transparent;
 }
 
+.button-return {
+    -fx-border-color:  transparent;
+    -fx-background-color: transparent;
+}
+
 .header-bar {
-    -fx-background-color: #1F4387;      /* deep blue */
+    -fx-background-color: #00008b;      /* deep blue */
     -fx-background-radius: 10;          /* rounded corners */
     -fx-padding: 5 15 5 15;             /* inner spacing */
 }
