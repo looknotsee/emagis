@@ -1,0 +1,70 @@
+.pane {
+    -fx-background-color: "#b0c4de";
+}
+
+.anchored-pane {
+    -fx-background-color: "#d4ebf2";
+}
+
+.titled-pane {
+    -fx-background-color: transparent;
+    -fx-border-color:  transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+.list-view {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+
+.text-field-title {
+    -fx-text-fill: white;
+    -fx-background-color: "#00008b";
+}
+
+.text-field-cash {
+    -fx-background-color: transparent;
+    -fx-border-color:  transparent;
+    -fx-text-font: "Arial Narrow";
+    -fx-font-size: 30;
+    -fx-font-weight: bold;
+}
+
+.button-cashin {
+    -fx-background-color: "#000080";
+    -fx-background-radius: 30;
+    -fx-border-radius: 30;
+    -fx-border-color:  transparent;
+    -fx-text-font: "Arial";
+    -fx-font-color: white;
+}
+
+.button-magis {
+    -fx-background-color: transparent;
+}
+
+.button-canteen {
+    -fx-background-color: transparent;
+}
+
+.header-bar {
+    -fx-background-color: #1F4387;      /* deep blue */
+    -fx-background-radius: 10;          /* rounded corners */
+    -fx-padding: 5 15 5 15;             /* inner spacing */
+}
+
+.header-bar .label {
+    -fx-text-fill: white;               /* white text */
+    -fx-font-weight: bold;
+}
+
+.balance-header {
+    -fx-background-color: #2B5DBD59;
+    -fx-background-radius: 10;
+    -fx-padding: 5 15 5 15;
+}
+
+
