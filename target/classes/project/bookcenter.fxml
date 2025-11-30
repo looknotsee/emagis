@@ -35,7 +35,7 @@
             </ImageView>
             <ScrollPane fitToWidth="true" hbarPolicy="NEVER" layoutY="213.0" prefHeight="1500.0" prefWidth="540.0" styleClass="anchored-pane-magis" stylesheets="@../../../../../../../magis/src/main/java/com/example/magis/styling.css" vbarPolicy="AS_NEEDED">
               <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="2000.0" prefWidth="538.0" styleClass="anchored-pane-magis" stylesheets="@../../../../../../../magis/src/main/java/com/example/magis/styling.css">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="2300.0" prefWidth="538.0" styleClass="anchored-pane-magis" stylesheets="@../../../../../../../magis/src/main/java/com/example/magis/styling.css">
                      <children>
                         <HBox layoutX="14.0" layoutY="20.0" prefHeight="166.0" prefWidth="495.0" styleClass="product-pane" stylesheets="@styling.css">
                            <children>
@@ -117,7 +117,7 @@
                         </HBox>
                         <HBox layoutX="15.0" layoutY="420.0" prefHeight="166.0" prefWidth="495.0" styleClass="product-pane" stylesheets="@styling.css">
                            <children>
-                              <StackPane maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="130.0" prefWidth="150.0" styleClass="rounded-img-avail" stylesheets="@styling.css">
+                              <StackPane maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="130.0" prefWidth="150.0" styleClass="rounded-img-unavail" stylesheets="@styling.css">
                                  <children>
                                     <ImageView fitHeight="139.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -149,7 +149,7 @@
                            <children>
                               <StackPane maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="130.0" prefWidth="150.0" styleClass="rounded-img-avail" stylesheets="@styling.css">
                                  <children>
-                                    <ImageView fitHeight="139.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="117.0" fitWidth="121.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@assets/constructpaper.png" />
                                        </image>
@@ -193,6 +193,7 @@
                                           <Circle fill="#16a34a" radius="7.0" stroke="WHITE" strokeType="INSIDE" />
                                           <Circle fill="PURPLE" radius="7.0" stroke="WHITE" strokeType="INSIDE" />
                                           <Circle fill="YELLOW" radius="7.0" stroke="WHITE" strokeType="INSIDE" />
+                                          <Circle fill="#ff9400" radius="7.0" stroke="WHITE" strokeType="INSIDE" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -203,7 +204,7 @@
                            <children>
                               <StackPane maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="130.0" prefWidth="150.0" styleClass="rounded-img-avail" stylesheets="@styling.css">
                                  <children>
-                                    <ImageView fitHeight="139.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="94.0" fitWidth="121.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@assets/markerpen.png" />
                                        </image>
@@ -252,9 +253,9 @@
                         </HBox>
                         <HBox layoutX="15.0" layoutY="1020.0" prefHeight="166.0" prefWidth="495.0" styleClass="product-pane" stylesheets="@styling.css">
                            <children>
-                              <StackPane maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="130.0" prefWidth="150.0" styleClass="rounded-img-avail" stylesheets="@styling.css">
+                              <StackPane maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="130.0" prefWidth="150.0" styleClass="rounded-img-unavail" stylesheets="@styling.css">
                                  <children>
-                                    <ImageView fitHeight="127.0" fitWidth="95.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="116.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@assets/uniform-polo.png" />
                                        </image>
@@ -292,9 +293,64 @@
                                     <Region prefHeight="112.0" prefWidth="88.0" />
                                     <HBox alignment="CENTER" prefHeight="27.0" prefWidth="63.0">
                                        <children>
-                                          <Label text="Label" />
-                                          <Label text="Label" />
-                                          <Label text="Label" />
+                                          <Label style="-fx-font-weight: bold;" styleClass="product-text" stylesheets="@styling.css" text="XS. " />
+                                          <Label style="-fx-font-weight: bold;" styleClass="product-text" stylesheets="@styling.css" text="S, " />
+                                          <Label style="-fx-font-weight: bold;" styleClass="product-text" stylesheets="@styling.css" text="M, " />
+                                          <Label style="-fx-font-weight: bold;" styleClass="product-text" stylesheets="@styling.css" text="L, " />
+                                          <Label style="-fx-font-weight: bold;" styleClass="product-text" stylesheets="@styling.css" text="XL" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="14.0" layoutY="1220.0" prefHeight="166.0" prefWidth="495.0" styleClass="product-pane" stylesheets="@styling.css">
+                           <children>
+                              <StackPane maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="130.0" prefWidth="150.0" styleClass="rounded-img-unavail" stylesheets="@styling.css">
+                                 <children>
+                                    <ImageView fitHeight="108.0" fitWidth="109.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@assets/uniform-slacks.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </StackPane>
+                              <Region prefHeight="156.0" prefWidth="60.0" />
+                              <VBox prefHeight="156.0" prefWidth="160.0">
+                                 <children>
+                                    <Label styleClass="product-name" stylesheets="@styling.css" text="Uniform">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <Label styleClass="product-name" stylesheets="@styling.css" text="Slacks">
+                                       <font>
+                                          <Font size="25.0" />
+                                       </font>
+                                    </Label>
+                                    <Label styleClass="product-text" stylesheets="@styling.css" text="₱ 6767676767">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Region prefHeight="14.0" prefWidth="161.0" />
+                                    <Label styleClass="product-text" stylesheets="@styling.css" text="Available sizes:">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="156.0" prefWidth="88.0">
+                                 <children>
+                                    <Region prefHeight="112.0" prefWidth="88.0" />
+                                    <HBox alignment="CENTER" prefHeight="27.0" prefWidth="63.0">
+                                       <children>
+                                          <Label style="-fx-font-weight: bold;" styleClass="product-text" stylesheets="@styling.css" text="XS. " />
+                                          <Label style="-fx-font-weight: bold;" styleClass="product-text" stylesheets="@styling.css" text="S, " />
+                                          <Label style="-fx-font-weight: bold;" styleClass="product-text" stylesheets="@styling.css" text="M, " />
+                                          <Label style="-fx-font-weight: bold;" styleClass="product-text" stylesheets="@styling.css" text="L, " />
+                                          <Label style="-fx-font-weight: bold;" styleClass="product-text" stylesheets="@styling.css" text="XL" />
                                        </children>
                                     </HBox>
                                  </children>
@@ -305,9 +361,9 @@
                   </AnchorPane>
               </content>
             </ScrollPane>
-            <Circle fill="#00ac09" layoutX="32.0" layoutY="185.0" radius="5.0" stroke="WHITE" strokeType="INSIDE" />
+            <Circle fill="#00ac09" layoutX="32.0" layoutY="181.0" radius="5.0" stroke="WHITE" strokeType="INSIDE" />
             <Circle fill="#ab2000" layoutX="32.0" layoutY="202.0" radius="5.0" stroke="WHITE" strokeType="INSIDE" />
-            <Label layoutX="41.0" layoutY="173.0" styleClass="label-legend" text="Available">
+            <Label layoutX="41.0" layoutY="168.0" styleClass="label-legend" text="Available">
                <font>
                   <Font size="16.0" />
                </font></Label>
