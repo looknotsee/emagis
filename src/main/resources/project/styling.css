@@ -50,6 +50,10 @@
     -fx-background-color: transparent;
 }
 
+.button-return{
+    -fx-background-color: transparent;
+}
+
 .header-bar {
     -fx-background-color: #1F4387;      /* deep blue */
     -fx-background-radius: 10;          /* rounded corners */
@@ -67,4 +71,45 @@
     -fx-padding: 5 15 5 15;
 }
 
+.product-pane {
+    -fx-background-color: #D4EBF2;
+    -fx-background-radius: 10;
+    -fx-padding: 5 15 5 15;
+}
+
+.rounded-img-avail {
+    -fx-background-radius: 20;
+    -fx-background-color: white;
+    -fx-border-color: #00AC09;
+    -fx-border-width: 3;
+    -fx-padding: 0;
+    -fx-background-insets: 0;
+    -fx-border-radius: 20;
+    -fx-overflow: hidden; /* this does NOT exist in JavaFX */
+}
+
+.rounded-img-unavail {
+    -fx-background-radius: 20;
+    -fx-background-color: white;
+    -fx-border-color: #AB2000;
+    -fx-border-width: 3;
+    -fx-padding: 0;
+    -fx-background-insets: 0;
+    -fx-border-radius: 20;
+    -fx-overflow: hidden;
+}
+
+.header-text{
+    -fx-text-fill: #1F4387;
+    -fx-font-weight: bold;
+}
+
+.product-name {
+    -fx-text-fill: #1F4387;
+    -fx-font-weight: bold;
+}
+
+.product-text{
+    -fx-text-fill: #1F4387;
+}
 
