@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.shape.Circle?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="342.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="342.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <left>
       <Pane prefHeight="566.0" prefWidth="342.0" stylesheets="@../../../../../../../magis/src/main/java/com/example/magis/styling.css" BorderPane.alignment="CENTER">
          <children>
@@ -43,7 +43,7 @@
                            </children></Pane>
                         <ImageView id="adobo1" fitHeight="61.0" fitWidth="94.0" layoutX="73.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../../../filipino-pork-adobo-scaled.jpg" />
+                              <Image url="@../../../../../filipino-pork-adobo-scaled.jpg" />
                            </image>
                            <clip>
                               <Circle centerX="30" centerY="30" radius="30" />
@@ -58,7 +58,7 @@
                         </Pane>
                         <ImageView id="curry" fitHeight="95.0" fitWidth="69.0" layoutX="205.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../../../../Downloads/Easy-Coconut-Curry-Chicken-9.jpg" />
+                              <Image url="@assets/curry.jpg" />
                            </image>
                            <clip>
                               <Circle centerX="30" centerY="30" radius="30" />
