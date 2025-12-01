@@ -1,12 +1,29 @@
-package project;
+package project.controller;
+
+import java.io.IOException;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import project.core.App;
+import project.core.UserAccount;
+import project.core.UserWallet;
+import project.service.Session;
 
 public class HomeController {
     
     @FXML
     private Label balanceLabel;
+
+    @FXML
+    private Button canteenButton;
+
+    @FXML
+    private Button BCButton;
+
+    @FXML
+    private Button profileButton;
+
 
     private UserWallet wallet;
 
@@ -35,4 +52,21 @@ public class HomeController {
         updateBalLabel();
     }
 
+    @FXML
+    public void onCanteenClick() {
+        try {
+            App.setRoot("magiscanteen");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+     @FXML
+    public void onBookClick() {
+        try {
+            App.setRoot("bookcenter");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

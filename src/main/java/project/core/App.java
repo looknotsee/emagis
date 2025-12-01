@@ -1,4 +1,4 @@
-package project;
+package project.core;
 
 import java.io.IOException;
 
@@ -8,9 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-/**
- * JavaFX App
- */
+
 public class App extends Application {
 
     private static Scene scene;
@@ -30,12 +28,13 @@ public class App extends Application {
         stage.show();
     }
 
-    static void setRoot(String fxml) throws IOException {
+    public static void setRoot(String fxml) throws IOException {
         scene.setRoot(loadFXML(fxml));
     }
 
     private static Parent loadFXML(String fxml) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
+        // FXML files are placed under resources/project/, so load them with an absolute path
+        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("/project/" + fxml + ".fxml"));
         return fxmlLoader.load();
     }
 

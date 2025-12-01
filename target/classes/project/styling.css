@@ -65,10 +65,20 @@
     -fx-font-weight: bold;
 }
 
+
 .balance-header {
     -fx-background-color: #2B5DBD59;
     -fx-background-radius: 10;
     -fx-padding: 5 15 5 15;
 }
 
-
+.spinner .increment-arrow-button,
+.spinner .decrement-arrow-button,
+.spinner .increment-arrow,
+.spinner .decrement-arrow {
+    -fx-padding: 0;
+    -fx-shape: "";
+    -fx-background-color: transparent;
+    -fx-pref-width: 0;
+    -fx-max-width: 0;
+}

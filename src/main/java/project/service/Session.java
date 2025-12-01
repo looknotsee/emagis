@@ -1,4 +1,6 @@
-package project;
+package project.service;
+
+import project.core.UserAccount;
 
 public class Session {
     private static UserAccount currentUser;

@@ -1,4 +1,4 @@
-package project;
+package project.controller;
 
 import java.io.IOException;
 
@@ -6,6 +6,10 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import project.core.App;
+import project.core.UserAccount;
+import project.service.AuthDB;
+import project.service.Session;
 
 
 public class LoginController {
