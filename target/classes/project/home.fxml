@@ -7,7 +7,6 @@
 <?import javafx.scene.control.ButtonBar?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -19,11 +18,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="960" prefWidth="540" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="960" prefWidth="540" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.HomeController">
    <center>
       <VBox prefHeight="361.0" prefWidth="540.0" BorderPane.alignment="CENTER">
          <children>
-            <HBox prefHeight="51.0" prefWidth="510.0" styleClass="header-bar" stylesheets="@styling.css">
+            <HBox prefHeight="51.0" prefWidth="510.0" style="-fx-background-color: #00008b;" styleClass="header-bar" stylesheets="@styling.css">
                <children>
                   <Label prefHeight="29.0" prefWidth="104.0" text="E-Magis">
                      <HBox.margin>
@@ -48,27 +47,31 @@
                </VBox.margin>
             </HBox>
             <Region prefHeight="17.0" prefWidth="540.0" />
-            <HBox prefHeight="124.0" prefWidth="480.0" styleClass="balance-header" stylesheets="@styling.css">
+            <HBox prefHeight="124.0" prefWidth="480.0" style="-fx-background-color: #d4ebf2;" styleClass="balance-header" stylesheets="@styling.css">
                <VBox.margin>
                   <Insets left="30.0" right="30.0" />
                </VBox.margin>
                <children>
-                  <VBox prefHeight="156.0" prefWidth="224.0">
+                  <VBox prefHeight="74.0" prefWidth="208.0">
                      <children>
-                        <Label prefHeight="43.0" prefWidth="233.0" text="Available Balance" textFill="#3663a8">
+                        <Label prefHeight="43.0" prefWidth="233.0" style="-fx-font-weight: bold;" text="Available Balance" textFill="DARKBLUE">
+                           <font>
+                              <Font size="22.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="balanceLabel" prefHeight="53.0" prefWidth="220.0" text="Label">
                            <font>
                               <Font size="27.0" />
                            </font>
                         </Label>
-                        <TextField text="insert money" />
                      </children>
                   </VBox>
-                  <Region prefHeight="156.0" prefWidth="84.0" />
-                  <ButtonBar prefHeight="156.0" prefWidth="170.0">
+                  <Region prefHeight="114.0" prefWidth="89.0" />
+                  <ButtonBar prefHeight="114.0" prefWidth="175.0">
                     <buttons>
-                      <Button minWidth="67.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="150.0" styleClass="button-cashin" text="+ Cash In" textAlignment="CENTER" textFill="WHITE">
+                      <Button minWidth="67.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="82.0" styleClass="button-cashin" text="+ Cash In" textAlignment="CENTER" textFill="WHITE">
                            <font>
-                              <Font size="24.0" />
+                              <Font size="15.0" />
                            </font>
                            <padding>
                               <Insets right="5.0" />
@@ -85,17 +88,17 @@
                </children>
             </HBox>
             <Region prefHeight="7.0" prefWidth="540.0" />
-            <HBox prefHeight="152.0" prefWidth="540.0">
+            <HBox prefHeight="152.0" prefWidth="430.0">
                <children>
-                  <VBox prefHeight="205.0" prefWidth="238.0">
+                  <VBox prefHeight="152.0" prefWidth="302.0">
                      <children>
                         <Label />
-                        <Button mnemonicParsing="false" prefHeight="80.0" prefWidth="111.0" styleClass="button-magis" stylesheets="@styling.css">
+                        <Button mnemonicParsing="false" prefHeight="68.0" prefWidth="64.0" styleClass="button-magis" stylesheets="@styling.css">
                            <VBox.margin>
                               <Insets left="100.0" right="20.0" />
                            </VBox.margin>
                            <graphic>
-                              <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="64.0" fitWidth="73.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@assets/canteen.png" />
                                  </image>
@@ -107,32 +110,32 @@
                               <Insets left="92.0" />
                            </VBox.margin>
                            <font>
-                              <Font name="System Bold" size="18.0" />
+                              <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
                      </children>
                   </VBox>
-                  <Region prefHeight="205.0" prefWidth="67.0" />
+                  <Region prefHeight="152.0" prefWidth="94.0" />
                   <VBox prefHeight="205.0" prefWidth="237.0">
                      <children>
-                        <Button mnemonicParsing="false" prefHeight="80.0" prefWidth="108.0" styleClass="button-canteen" stylesheets="@styling.css">
+                        <Button mnemonicParsing="false" prefHeight="66.0" prefWidth="88.0" styleClass="button-canteen" stylesheets="@styling.css">
                            <VBox.margin>
                               <Insets left="20.0" right="100.0" top="17.0" />
                            </VBox.margin>
                            <graphic>
-                              <ImageView fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="65.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@assets/bookcenter.png" />
                                  </image>
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Label text="Bookcenter">
+                        <Label alignment="CENTER" text="Bookcenter">
                            <VBox.margin>
                               <Insets left="30.0" />
                            </VBox.margin>
                            <font>
-                              <Font name="System Bold" size="18.0" />
+                              <Font name="System Bold" size="12.0" />
                            </font>
                         </Label>
                      </children>
