@@ -18,9 +18,9 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="960.0" prefWidth="540.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.controller.BookcenterController">
    <center>
-      <Pane prefHeight="960.0" prefWidth="548.0" stylesheets="@../OneDrive/magis/src/main/java/com/example/magis/styling.css" BorderPane.alignment="CENTER">
+      <Pane prefHeight="960.0" prefWidth="548.0" stylesheets="@stylingBC.css" BorderPane.alignment="CENTER">
          <children>
-            <Button layoutX="27.0" layoutY="103.0" minHeight="17.0" minWidth="42.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="46.0" styleClass="button-return" stylesheets="@../OneDrive/Documents/codes/emagis/src/main/resources/project/styling.css">
+            <Button layoutX="27.0" layoutY="103.0" minHeight="17.0" minWidth="42.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="46.0" styleClass="button-return" stylesheets="@../emagis/src/main/resources/project/styling.css">
                <graphic>
                   <ImageView fitHeight="38.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -29,7 +29,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <ImageView fitHeight="60.0" fitWidth="64.0" layoutX="465.0" layoutY="92.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="39.0" fitWidth="40.0" layoutX="486.0" layoutY="103.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@assets/bookcenter.png" />
                </image>
@@ -38,9 +38,9 @@
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="2300.0" prefWidth="538.0" styleClass="anchored-pane-magis" stylesheets="@../OneDrive/magis/src/main/java/com/example/magis/styling.css">
                      <children>
-                        <HBox layoutX="14.0" layoutY="20.0" prefHeight="166.0" prefWidth="495.0" styleClass="product-pane" stylesheets="@../OneDrive/Documents/codes/emagis/src/main/resources/project/styling.css">
+                        <HBox layoutX="14.0" layoutY="20.0" prefHeight="166.0" prefWidth="495.0" styleClass="product-pane" stylesheets="@../emagis/src/main/resources/project/styling.css">
                            <children>
-                              <StackPane maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="130.0" prefWidth="150.0" styleClass="rounded-img-avail" stylesheets="@../OneDrive/Documents/codes/emagis/src/main/resources/project/styling.css">
+                              <StackPane maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="130.0" prefWidth="150.0" styleClass="rounded-img-avail" stylesheets="@styling.css">
                                  <children>
                                     <ImageView fitHeight="80.0" fitWidth="79.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -58,7 +58,7 @@
                                           <Font size="30.0" />
                                        </font>
                                     </Label>
-                                    <Label styleClass="product-text" stylesheets="@../OneDrive/Documents/codes/emagis/src/main/resources/project/styling.css" text="₱ 6767676767">
+                                    <Label styleClass="product-text" stylesheets="@../emagis/src/main/resources/project/styling.css" text="₱ 6767676767">
                                        <font>
                                           <Font size="18.0" />
                                        </font>
@@ -66,9 +66,23 @@
                                     <Region prefHeight="14.0" prefWidth="161.0" />
                                     <AnchorPane prefHeight="60.0" prefWidth="160.0">
                                        <children>
-                                          <Button fx:id="minusButton" layoutX="-4.0" layoutY="18.0" mnemonicParsing="false" onAction="#onMinusClick" text="-" />
-                                          <Button fx:id="addButton" layoutX="93.0" layoutY="18.0" mnemonicParsing="false" onAction="#onAddClick" text="+" />
-                                          <Spinner fx:id="QtyLabel" layoutX="26.0" layoutY="18.0" prefHeight="25.0" prefWidth="52.0" stylesheets="@styling.css" />
+                                          <Button fx:id="minusButton" layoutX="-4.0" layoutY="18.0" mnemonicParsing="false" onAction="#onMinusClick" styleClass="button-return" stylesheets="@../emagis/src/main/resources/project/styling.css">
+                                             <graphic>
+                                                <ImageView fitHeight="17.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@assets/minus%20(1).png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic></Button>
+                                          <Button fx:id="addButton" layoutX="80.0" layoutY="19.0" mnemonicParsing="false" onAction="#onAddClick" prefHeight="22.0" prefWidth="28.0" styleClass="button-return" stylesheets="@../emagis/src/main/resources/project/styling.css">
+                                             <graphic>
+                                                <ImageView fitHeight="17.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@assets/plus.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic></Button>
+                                          <Spinner fx:id="QtySpinner" layoutX="26.0" layoutY="18.0" prefHeight="25.0" prefWidth="52.0" stylesheets="@styling.css" />
                                        </children>
                                     </AnchorPane>
                                  </children>
@@ -81,9 +95,9 @@
                               </VBox>
                            </children>
                         </HBox>
-                        <HBox layoutX="15.0" layoutY="220.0" prefHeight="166.0" prefWidth="495.0" styleClass="product-pane" stylesheets="@../OneDrive/Documents/codes/emagis/src/main/resources/project/styling.css">
+                        <HBox layoutX="15.0" layoutY="220.0" prefHeight="166.0" prefWidth="495.0" styleClass="product-pane" stylesheets="@../emagis/src/main/resources/project/styling.css">
                            <children>
-                              <StackPane maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="130.0" prefWidth="150.0" styleClass="rounded-img-avail" stylesheets="@../OneDrive/Documents/codes/emagis/src/main/resources/project/styling.css">
+                              <StackPane maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="130.0" prefWidth="150.0" styleClass="rounded-img-avail" stylesheets="@styling.css">
                                  <children>
                                     <ImageView fitHeight="139.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -107,13 +121,36 @@
                                        </font>
                                     </Label>
                                     <Region prefHeight="14.0" prefWidth="161.0" />
+                                    <AnchorPane prefHeight="60.0" prefWidth="160.0">
+                                       <children>
+                                          <Button fx:id="minusButton1" layoutX="-4.0" layoutY="18.0" mnemonicParsing="false" onAction="#onMinusClick" styleClass="button-return" stylesheets="@../emagis/src/main/resources/project/styling.css">
+                                             <graphic>
+                                                <ImageView fitHeight="17.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@assets/minus%20(1).png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="addButton1" layoutX="80.0" layoutY="19.0" mnemonicParsing="false" onAction="#onAddClick" prefHeight="22.0" prefWidth="28.0" styleClass="button-return" stylesheets="@../emagis/src/main/resources/project/styling.css">
+                                             <graphic>
+                                                <ImageView fitHeight="17.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@assets/plus.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Spinner fx:id="QtyLabel1" layoutX="26.0" layoutY="18.0" prefHeight="25.0" prefWidth="52.0" stylesheets="@styling.css" />
+                                       </children>
+                                    </AnchorPane>
                                  </children>
                               </VBox>
                            </children>
                         </HBox>
-                        <HBox layoutX="15.0" layoutY="420.0" prefHeight="166.0" prefWidth="495.0" styleClass="product-pane" stylesheets="@../OneDrive/Documents/codes/emagis/src/main/resources/project/styling.css">
+                        <HBox layoutX="15.0" layoutY="420.0" prefHeight="166.0" prefWidth="495.0" styleClass="product-pane" stylesheets="@../emagis/src/main/resources/project/styling.css">
                            <children>
-                              <StackPane maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="130.0" prefWidth="150.0" styleClass="rounded-img-unavail" stylesheets="@../OneDrive/Documents/codes/emagis/src/main/resources/project/styling.css">
+                              <StackPane maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="130.0" prefWidth="150.0" styleClass="rounded-img-unavail" stylesheets="@styling.css">
                                  <children>
                                     <ImageView fitHeight="139.0" fitWidth="128.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -137,13 +174,36 @@
                                        </font>
                                     </Label>
                                     <Region prefHeight="14.0" prefWidth="161.0" />
+                                    <AnchorPane prefHeight="60.0" prefWidth="160.0">
+                                       <children>
+                                          <Button fx:id="minusButton2" layoutX="-4.0" layoutY="18.0" mnemonicParsing="false" onAction="#onMinusClick" styleClass="button-return" stylesheets="@../emagis/src/main/resources/project/styling.css">
+                                             <graphic>
+                                                <ImageView fitHeight="17.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@assets/minus%20(1).png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="addButton2" layoutX="80.0" layoutY="19.0" mnemonicParsing="false" onAction="#onAddClick" prefHeight="22.0" prefWidth="28.0" styleClass="button-return" stylesheets="@../emagis/src/main/resources/project/styling.css">
+                                             <graphic>
+                                                <ImageView fitHeight="17.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@assets/plus.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Spinner fx:id="QtyLabel2" layoutX="26.0" layoutY="18.0" prefHeight="25.0" prefWidth="52.0" stylesheets="@styling.css" />
+                                       </children>
+                                    </AnchorPane>
                                  </children>
                               </VBox>
                            </children>
                         </HBox>
-                        <HBox layoutX="14.0" layoutY="620.0" prefHeight="166.0" prefWidth="495.0" styleClass="product-pane" stylesheets="@../OneDrive/Documents/codes/emagis/src/main/resources/project/styling.css">
+                        <HBox layoutX="14.0" layoutY="620.0" prefHeight="166.0" prefWidth="495.0" styleClass="product-pane" stylesheets="@../emagis/src/main/resources/project/styling.css">
                            <children>
-                              <StackPane maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="130.0" prefWidth="150.0" styleClass="rounded-img-avail" stylesheets="@../OneDrive/Documents/codes/emagis/src/main/resources/project/styling.css">
+                              <StackPane maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="130.0" prefWidth="150.0" styleClass="rounded-img-avail" stylesheets="@styling.css">
                                  <children>
                                     <ImageView fitHeight="117.0" fitWidth="121.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -153,14 +213,9 @@
                                  </children>
                               </StackPane>
                               <Region prefHeight="156.0" prefWidth="60.0" />
-                              <VBox prefHeight="156.0" prefWidth="160.0">
+                              <VBox prefHeight="157.0" prefWidth="239.0">
                                  <children>
-                                    <Label styleClass="product-name" stylesheets="@../OneDrive/Documents/codes/emagis/src/main/resources/project/styling.css" text="Construction">
-                                       <font>
-                                          <Font size="25.0" />
-                                       </font>
-                                    </Label>
-                                    <Label styleClass="product-name" stylesheets="@../OneDrive/Documents/codes/emagis/src/main/resources/project/styling.css" text="Paper">
+                                    <Label styleClass="product-name" stylesheets="@../OneDrive/Documents/codes/emagis/src/main/resources/project/styling.css" text="Construction Paper">
                                        <font>
                                           <Font size="25.0" />
                                        </font>
@@ -171,36 +226,38 @@
                                        </font>
                                     </Label>
                                     <Region prefHeight="14.0" prefWidth="161.0" />
-                                    <Label styleClass="product-text" stylesheets="@../OneDrive/Documents/codes/emagis/src/main/resources/project/styling.css" text="Available colors:">
-                                       <font>
-                                          <Font size="15.0" />
-                                       </font>
-                                    </Label>
-                                 </children>
-                              </VBox>
-                              <VBox prefHeight="156.0" prefWidth="88.0">
-                                 <children>
-                                    <Region prefHeight="112.0" prefWidth="88.0" />
-                                    <HBox alignment="CENTER" prefHeight="27.0" prefWidth="63.0">
+                                    <AnchorPane prefHeight="60.0" prefWidth="160.0">
                                        <children>
-                                          <Circle radius="7.0" stroke="WHITE" strokeType="INSIDE" />
-                                          <Circle fill="#1e3a8a" radius="7.0" stroke="WHITE" strokeType="INSIDE" />
-                                          <Circle fill="#ab2000" radius="7.0" stroke="WHITE" strokeType="INSIDE" />
-                                          <Circle fill="#16a34a" radius="7.0" stroke="WHITE" strokeType="INSIDE" />
-                                          <Circle fill="PURPLE" radius="7.0" stroke="WHITE" strokeType="INSIDE" />
-                                          <Circle fill="YELLOW" radius="7.0" stroke="WHITE" strokeType="INSIDE" />
-                                          <Circle fill="#ff9400" radius="7.0" stroke="WHITE" strokeType="INSIDE" />
+                                          <Button fx:id="minusButton3" layoutX="-4.0" layoutY="18.0" mnemonicParsing="false" onAction="#onMinusClick" styleClass="button-return" stylesheets="@../emagis/src/main/resources/project/styling.css">
+                                             <graphic>
+                                                <ImageView fitHeight="17.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@assets/minus%20(1).png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="addButton3" layoutX="80.0" layoutY="19.0" mnemonicParsing="false" onAction="#onAddClick" prefHeight="22.0" prefWidth="28.0" styleClass="button-return" stylesheets="@../emagis/src/main/resources/project/styling.css">
+                                             <graphic>
+                                                <ImageView fitHeight="17.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@assets/plus.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Spinner fx:id="QtyLabel3" layoutX="26.0" layoutY="18.0" prefHeight="25.0" prefWidth="52.0" stylesheets="@styling.css" />
                                        </children>
-                                    </HBox>
+                                    </AnchorPane>
                                  </children>
                               </VBox>
                            </children>
                         </HBox>
-                        <HBox layoutX="15.0" layoutY="820.0" prefHeight="166.0" prefWidth="495.0" styleClass="product-pane" stylesheets="@../OneDrive/Documents/codes/emagis/src/main/resources/project/styling.css">
+                        <HBox layoutX="15.0" layoutY="820.0" prefHeight="166.0" prefWidth="495.0" styleClass="product-pane" stylesheets="@../emagis/src/main/resources/project/styling.css">
                            <children>
-                              <StackPane maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="130.0" prefWidth="150.0" styleClass="rounded-img-avail" stylesheets="@../OneDrive/Documents/codes/emagis/src/main/resources/project/styling.css">
+                              <StackPane maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="130.0" prefWidth="150.0" styleClass="rounded-img-avail" stylesheets="@styling.css">
                                  <children>
-                                    <ImageView fitHeight="94.0" fitWidth="121.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="149.0" fitWidth="132.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@assets/markerpen.png" />
                                        </image>
@@ -208,14 +265,9 @@
                                  </children>
                               </StackPane>
                               <Region prefHeight="156.0" prefWidth="60.0" />
-                              <VBox prefHeight="156.0" prefWidth="160.0">
+                              <VBox prefHeight="157.0" prefWidth="242.0">
                                  <children>
-                                    <Label styleClass="product-name" stylesheets="@../OneDrive/Documents/codes/emagis/src/main/resources/project/styling.css" text="Permanent">
-                                       <font>
-                                          <Font size="25.0" />
-                                       </font>
-                                    </Label>
-                                    <Label styleClass="product-name" stylesheets="@../OneDrive/Documents/codes/emagis/src/main/resources/project/styling.css" text="Marker">
+                                    <Label prefHeight="36.0" prefWidth="231.0" styleClass="product-name" stylesheets="@../OneDrive/Documents/codes/emagis/src/main/resources/project/styling.css" text="Permanent Marker">
                                        <font>
                                           <Font size="25.0" />
                                        </font>
@@ -226,32 +278,38 @@
                                        </font>
                                     </Label>
                                     <Region prefHeight="14.0" prefWidth="161.0" />
-                                    <Label styleClass="product-text" stylesheets="@../OneDrive/Documents/codes/emagis/src/main/resources/project/styling.css" text="Available colors:">
-                                       <font>
-                                          <Font size="15.0" />
-                                       </font>
-                                    </Label>
-                                 </children>
-                              </VBox>
-                              <VBox prefHeight="156.0" prefWidth="88.0">
-                                 <children>
-                                    <Region prefHeight="112.0" prefWidth="88.0" />
-                                    <HBox alignment="CENTER" prefHeight="27.0" prefWidth="63.0">
+                                    <AnchorPane prefHeight="60.0" prefWidth="160.0">
                                        <children>
-                                          <Circle radius="7.0" stroke="WHITE" strokeType="INSIDE" />
-                                          <Circle fill="#1e3a8a" radius="7.0" stroke="WHITE" strokeType="INSIDE" />
-                                          <Circle fill="#ab2000" radius="7.0" stroke="WHITE" strokeType="INSIDE" />
+                                          <Button fx:id="minusButton31" layoutX="-4.0" layoutY="18.0" mnemonicParsing="false" onAction="#onMinusClick" styleClass="button-return" stylesheets="@../emagis/src/main/resources/project/styling.css">
+                                             <graphic>
+                                                <ImageView fitHeight="17.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@assets/minus%20(1).png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="addButton31" layoutX="80.0" layoutY="19.0" mnemonicParsing="false" onAction="#onAddClick" prefHeight="22.0" prefWidth="28.0" styleClass="button-return" stylesheets="@../emagis/src/main/resources/project/styling.css">
+                                             <graphic>
+                                                <ImageView fitHeight="17.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@assets/plus.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Spinner fx:id="QtyLabel31" layoutX="26.0" layoutY="18.0" prefHeight="25.0" prefWidth="52.0" stylesheets="@styling.css" />
                                        </children>
-                                    </HBox>
+                                    </AnchorPane>
                                  </children>
                               </VBox>
                            </children>
                         </HBox>
-                        <HBox layoutX="15.0" layoutY="1020.0" prefHeight="166.0" prefWidth="495.0" styleClass="product-pane" stylesheets="@../OneDrive/Documents/codes/emagis/src/main/resources/project/styling.css">
+                        <HBox layoutX="15.0" layoutY="1020.0" prefHeight="166.0" prefWidth="495.0" styleClass="product-pane" stylesheets="@../emagis/src/main/resources/project/styling.css">
                            <children>
-                              <StackPane maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="130.0" prefWidth="150.0" styleClass="rounded-img-unavail" stylesheets="@../OneDrive/Documents/codes/emagis/src/main/resources/project/styling.css">
+                              <StackPane maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="130.0" prefWidth="150.0" styleClass="rounded-img-unavail" stylesheets="@styling.css">
                                  <children>
-                                    <ImageView fitHeight="116.0" fitWidth="90.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="152.0" fitWidth="139.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@assets/uniform-polo.png" />
                                        </image>
@@ -261,12 +319,7 @@
                               <Region prefHeight="156.0" prefWidth="60.0" />
                               <VBox prefHeight="156.0" prefWidth="160.0">
                                  <children>
-                                    <Label styleClass="product-name" stylesheets="@../OneDrive/Documents/codes/emagis/src/main/resources/project/styling.css" text="Uniform">
-                                       <font>
-                                          <Font size="25.0" />
-                                       </font>
-                                    </Label>
-                                    <Label styleClass="product-name" stylesheets="@../OneDrive/Documents/codes/emagis/src/main/resources/project/styling.css" text="Polo">
+                                    <Label styleClass="product-name" stylesheets="@../OneDrive/Documents/codes/emagis/src/main/resources/project/styling.css" text="Uniform Polo">
                                        <font>
                                           <Font size="25.0" />
                                        </font>
@@ -276,7 +329,29 @@
                                           <Font size="18.0" />
                                        </font>
                                     </Label>
-                                    <Region prefHeight="14.0" prefWidth="161.0" />
+                                    <AnchorPane prefHeight="60.0" prefWidth="160.0">
+                                       <children>
+                                          <Button fx:id="minusButton311" layoutX="-4.0" layoutY="18.0" mnemonicParsing="false" onAction="#onMinusClick" styleClass="button-return" stylesheets="@../emagis/src/main/resources/project/styling.css">
+                                             <graphic>
+                                                <ImageView fitHeight="17.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@assets/minus%20(1).png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="addButton311" layoutX="80.0" layoutY="19.0" mnemonicParsing="false" onAction="#onAddClick" prefHeight="22.0" prefWidth="28.0" styleClass="button-return" stylesheets="@../emagis/src/main/resources/project/styling.css">
+                                             <graphic>
+                                                <ImageView fitHeight="17.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@assets/plus.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Spinner fx:id="QtyLabel311" layoutX="26.0" layoutY="18.0" prefHeight="25.0" prefWidth="52.0" stylesheets="@styling.css" />
+                                       </children>
+                                    </AnchorPane>
                                     <Label styleClass="product-text" stylesheets="@../OneDrive/Documents/codes/emagis/src/main/resources/project/styling.css" text="Available sizes:">
                                        <font>
                                           <Font size="15.0" />
@@ -286,7 +361,7 @@
                               </VBox>
                               <VBox prefHeight="156.0" prefWidth="88.0">
                                  <children>
-                                    <Region prefHeight="112.0" prefWidth="88.0" />
+                                    <Region prefHeight="114.0" prefWidth="88.0" />
                                     <HBox alignment="CENTER" prefHeight="27.0" prefWidth="63.0">
                                        <children>
                                           <Label style="-fx-font-weight: bold;" styleClass="product-text" stylesheets="@../OneDrive/Documents/codes/emagis/src/main/resources/project/styling.css" text="XS. " />
@@ -300,11 +375,11 @@
                               </VBox>
                            </children>
                         </HBox>
-                        <HBox layoutX="14.0" layoutY="1220.0" prefHeight="166.0" prefWidth="495.0" styleClass="product-pane" stylesheets="@../OneDrive/Documents/codes/emagis/src/main/resources/project/styling.css">
+                        <HBox layoutX="15.0" layoutY="1220.0" prefHeight="166.0" prefWidth="495.0" styleClass="product-pane" stylesheets="@../emagis/src/main/resources/project/styling.css">
                            <children>
-                              <StackPane maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="130.0" prefWidth="150.0" styleClass="rounded-img-unavail" stylesheets="@../OneDrive/Documents/codes/emagis/src/main/resources/project/styling.css">
+                              <StackPane maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="130.0" prefWidth="150.0" styleClass="rounded-img-unavail" stylesheets="@styling.css">
                                  <children>
-                                    <ImageView fitHeight="108.0" fitWidth="109.0" pickOnBounds="true" preserveRatio="true">
+                                    <ImageView fitHeight="152.0" fitWidth="139.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@assets/uniform-slacks.png" />
                                        </image>
@@ -312,14 +387,9 @@
                                  </children>
                               </StackPane>
                               <Region prefHeight="156.0" prefWidth="60.0" />
-                              <VBox prefHeight="156.0" prefWidth="160.0">
+                              <VBox prefHeight="157.0" prefWidth="174.0">
                                  <children>
-                                    <Label styleClass="product-name" stylesheets="@../OneDrive/Documents/codes/emagis/src/main/resources/project/styling.css" text="Uniform">
-                                       <font>
-                                          <Font size="25.0" />
-                                       </font>
-                                    </Label>
-                                    <Label styleClass="product-name" stylesheets="@../OneDrive/Documents/codes/emagis/src/main/resources/project/styling.css" text="Slacks">
+                                    <Label styleClass="product-name" stylesheets="@../OneDrive/Documents/codes/emagis/src/main/resources/project/styling.css" text="Uniform Slacks">
                                        <font>
                                           <Font size="25.0" />
                                        </font>
@@ -329,7 +399,29 @@
                                           <Font size="18.0" />
                                        </font>
                                     </Label>
-                                    <Region prefHeight="14.0" prefWidth="161.0" />
+                                    <AnchorPane prefHeight="60.0" prefWidth="160.0">
+                                       <children>
+                                          <Button fx:id="minusButton3111" layoutX="-4.0" layoutY="18.0" mnemonicParsing="false" onAction="#onMinusClick" styleClass="button-return" stylesheets="@../emagis/src/main/resources/project/styling.css">
+                                             <graphic>
+                                                <ImageView fitHeight="17.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@assets/minus%20(1).png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Button fx:id="addButton3111" layoutX="80.0" layoutY="19.0" mnemonicParsing="false" onAction="#onAddClick" prefHeight="22.0" prefWidth="28.0" styleClass="button-return" stylesheets="@../emagis/src/main/resources/project/styling.css">
+                                             <graphic>
+                                                <ImageView fitHeight="17.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@assets/plus.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Spinner fx:id="QtyLabel3111" layoutX="26.0" layoutY="18.0" prefHeight="25.0" prefWidth="52.0" stylesheets="@styling.css" />
+                                       </children>
+                                    </AnchorPane>
                                     <Label styleClass="product-text" stylesheets="@../OneDrive/Documents/codes/emagis/src/main/resources/project/styling.css" text="Available sizes:">
                                        <font>
                                           <Font size="15.0" />
@@ -339,7 +431,7 @@
                               </VBox>
                               <VBox prefHeight="156.0" prefWidth="88.0">
                                  <children>
-                                    <Region prefHeight="112.0" prefWidth="88.0" />
+                                    <Region prefHeight="114.0" prefWidth="88.0" />
                                     <HBox alignment="CENTER" prefHeight="27.0" prefWidth="63.0">
                                        <children>
                                           <Label style="-fx-font-weight: bold;" styleClass="product-text" stylesheets="@../OneDrive/Documents/codes/emagis/src/main/resources/project/styling.css" text="XS. " />
@@ -357,17 +449,17 @@
                   </AnchorPane>
               </content>
             </ScrollPane>
-            <Circle fill="#00ac09" layoutX="32.0" layoutY="181.0" radius="5.0" stroke="WHITE" strokeType="INSIDE" />
-            <Circle fill="#ab2000" layoutX="32.0" layoutY="202.0" radius="5.0" stroke="WHITE" strokeType="INSIDE" />
-            <Label layoutX="41.0" layoutY="168.0" styleClass="label-legend" text="Available">
+            <Circle fill="#00ac09" layoutX="88.0" layoutY="176.0" radius="6.0" stroke="WHITE" strokeType="INSIDE" />
+            <Circle fill="#ab2000" layoutX="88.0" layoutY="196.0" radius="6.0" stroke="WHITE" strokeType="INSIDE" />
+            <Label layoutX="104.0" layoutY="163.0" styleClass="simple-text" stylesheets="@../emagis/src/main/resources/project/styling.css" text="Available">
                <font>
                   <Font size="16.0" />
                </font></Label>
-            <Label layoutX="41.0" layoutY="190.0" styleClass="label-legend" text="Not Available">
+            <Label layoutX="104.0" layoutY="183.0" styleClass="simple-text" stylesheets="@../emagis/src/main/resources/project/styling.css" text="Not Available">
                <font>
                   <Font size="16.0" />
                </font></Label>
-            <HBox alignment="CENTER" layoutX="15.0" layoutY="29.0" prefHeight="51.0" prefWidth="510.0" styleClass="header-bar" stylesheets="@../OneDrive/Documents/codes/emagis/src/main/resources/project/styling.css">
+            <HBox alignment="CENTER" layoutX="15.0" layoutY="29.0" prefHeight="51.0" prefWidth="510.0" styleClass="header-bar" stylesheets="@../emagis/src/main/resources/project/styling.css">
                <children>
                   <Label text="E-Magis">
                      <font>
@@ -382,9 +474,23 @@
                   </Label>
                </children>
             </HBox>
-            <Label layoutX="363.0" layoutY="152.0" styleClass="header-text" stylesheets="@../OneDrive/Documents/codes/emagis/src/main/resources/project/styling.css" text="Bookcenter">
+            <Label layoutX="324.0" layoutY="100.0" styleClass="title-text" stylesheets="@../emagis/src/main/resources/project/styling.css" text="Bookcenter">
                <font>
                   <Font size="30.0" />
+               </font>
+            </Label>
+            <Button layoutX="483.0" layoutY="157.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="35.0" styleClass="button-return" stylesheets="@../emagis/src/main/resources/project/styling.css">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assets/shop.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label layoutX="423.0" layoutY="167.0" styleClass="simple-text" stylesheets="@../emagis/src/main/resources/project/styling.css" text="Check-out">
+               <font>
+                  <Font size="13.0" />
                </font>
             </Label>
          </children>

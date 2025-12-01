@@ -53,7 +53,7 @@ public class LoginController {
     if (user != null) {
         Session.setCurrentUser(user);
         try {
-            App.setRoot("home");
+            App.setRoot("home2");
         } catch (IOException e) {
             e.printStackTrace();
             errorLabel.setText("Failed to load into homescreen.");

@@ -16,54 +16,459 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="960.0" prefWidth="540.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="960.0" prefWidth="540.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.controller.MagiscanteenController">
    <top>
-      <Pane prefHeight="246.0" prefWidth="540.0" BorderPane.alignment="CENTER">
+      <Pane prefHeight="246.0" prefWidth="540.0" stylesheets="@stylingCanteen.css" BorderPane.alignment="CENTER">
          <children>
-            <ScrollPane fitToWidth="true" hbarPolicy="NEVER" layoutY="246.0" prefHeight="890.0" prefWidth="540.0" styleClass="anchored-pane-magis" stylesheets="@styling.css" vbarPolicy="AS_NEEDED">
+            <ScrollPane fitToWidth="true" hbarPolicy="NEVER" layoutY="246.0" prefHeight="1300.0" prefWidth="540.0" styleClass="anchored-pane-magis" stylesheets="@../../../../../../../../Downloads/styling.css" vbarPolicy="AS_NEEDED">
               <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="752.0" prefWidth="525.0" styleClass="anchored-pane-magis" stylesheets="@styling.css">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1300.0" prefWidth="538.0" styleClass="anchored-pane-magis" stylesheets="@../../../../../../../../Downloads/styling.css">
                      <children>
-                        <Pane layoutX="34.0" layoutY="47.0" prefHeight="90.0" prefWidth="103.0" styleClass="pane-foodlist" stylesheets="@styling.css" />
-                        <HBox layoutX="77.0" layoutY="33.0" prefHeight="131.0" prefWidth="384.0">
+                        <HBox layoutX="73.0" layoutY="40.0" prefHeight="95.0" prefWidth="446.0">
                            <children>
-                              <StackPane prefHeight="94.0" prefWidth="128.0">
+                              <AnchorPane prefHeight="139.0" prefWidth="206.0">
                                  <children>
-                                    <ImageView id="adobo1" fitHeight="131.0" fitWidth="130.0" pickOnBounds="true">
+                                    <ImageView fitHeight="121.0" fitWidth="181.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
                                           <Image url="@assets/adobo.jpg" />
                                        </image>
                                     </ImageView>
+                                    <Circle fx:id="borderCircle" centerX="50" centerY="50" fill="transparent" layoutX="10.0" layoutY="10.0" radius="58.0" stroke="#39c113" strokeWidth="4.0" />
                                  </children>
                                  <clip>
-                                    <Circle centerX="50" centerY="50" radius="50" />
+                                    <Circle centerX="60" centerY="60" radius="60" />
                                  </clip>
-                              </StackPane>
-                              <Region prefHeight="131.0" prefWidth="143.0" />
-                              <StackPane prefHeight="94.0" prefWidth="128.0">
-                                 <clip>
-                                    <Circle centerX="65" centerY="65" radius="65" />
-                                 </clip>
+                              </AnchorPane>
+                              <Region prefHeight="139.0" prefWidth="82.0" />
+                              <AnchorPane prefHeight="139.0" prefWidth="179.0">
                                  <children>
-                                    <ImageView id="adobo1" fitHeight="131.0" fitWidth="130.0" pickOnBounds="true">
+                                    <ImageView fitHeight="132.0" fitWidth="233.0" layoutX="-46.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
-                                          <Image url="@assets/adobo.jpg" />
+                                          <Image url="@assets/curry.jpg" />
                                        </image>
                                     </ImageView>
+                                    <Circle fx:id="borderCircle1" centerX="50" centerY="50" fill="transparent" layoutX="10.0" layoutY="10.0" radius="58.0" stroke="#39c113" strokeWidth="4.0" />
                                  </children>
-                              </StackPane>
+                                 <clip>
+                                    <Circle centerX="60" centerY="60" radius="60" />
+                                 </clip>
+                              </AnchorPane>
                            </children>
                         </HBox>
-                        <Circle fx:id="borderCircle" centerX="50" centerY="50" fill="transparent" layoutX="92.0" layoutY="48.0" radius="67.0" stroke="#39c113" strokeWidth="4.0" />
+                        <VBox alignment="CENTER" layoutX="63.0" layoutY="141.0" prefHeight="87.0" prefWidth="143.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="0.0" prefWidth="143.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="31.0" styleClass="food-buttons" stylesheets="@../emagis/src/main/resources/project/styling.css">
+                                       <graphic>
+                                          <ImageView fitHeight="21.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@assets/minus%20(1).png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <StackPane prefHeight="41.0" prefWidth="28.0">
+                                       <children>
+                                          <Circle fill="DARKBLUE" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                                          <Label style="-fx-font-weight: bold;" text="0" textFill="WHITE" />
+                                       </children>
+                                    </StackPane>
+                                    <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="31.0" styleClass="food-buttons" stylesheets="@../emagis/src/main/resources/project/styling.css">
+                                       <graphic>
+                                          <ImageView fitHeight="21.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@assets/plus.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <Region prefHeight="5.0" prefWidth="143.0" />
+                              <Label styleClass="food-name" stylesheets="@../emagis/src/main/resources/project/styling.css" text="Pork Adobo">
+                                 <font>
+                                    <Font name="Arial Black" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label styleClass="food-text" stylesheets="@../emagis/src/main/resources/project/styling.css" text="₱ 6767676" />
+                           </children>
+                        </VBox>
+                        <HBox layoutX="73.0" layoutY="270.0" prefHeight="95.0" prefWidth="446.0">
+                           <children>
+                              <AnchorPane prefHeight="139.0" prefWidth="206.0">
+                                 <children>
+                                    <ImageView fitHeight="119.0" fitWidth="165.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@assets/humba.jpg" />
+                                       </image>
+                                    </ImageView>
+                                    <Circle fx:id="borderCircle1" centerX="50" centerY="50" fill="transparent" layoutX="10.0" layoutY="10.0" radius="58.0" stroke="#39c113" strokeWidth="4.0" />
+                                 </children>
+                                 <clip>
+                                    <Circle centerX="60" centerY="60" radius="60" />
+                                 </clip>
+                              </AnchorPane>
+                              <Region prefHeight="139.0" prefWidth="82.0" />
+                              <AnchorPane prefHeight="139.0" prefWidth="194.0">
+                                 <children>
+                                    <ImageView fitHeight="140.0" fitWidth="184.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@assets/sisig.jpg" />
+                                       </image>
+                                    </ImageView>
+                                    <Circle fx:id="borderCircle11" centerX="50" centerY="50" fill="transparent" layoutX="10.0" layoutY="10.0" radius="58.0" stroke="#39c113" strokeWidth="4.0" />
+                                 </children>
+                                 <clip>
+                                    <Circle centerX="60" centerY="60" radius="60" />
+                                 </clip>
+                              </AnchorPane>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="73.0" layoutY="500.0" prefHeight="95.0" prefWidth="446.0">
+                           <children>
+                              <AnchorPane prefHeight="139.0" prefWidth="206.0">
+                                 <children>
+                                    <ImageView fitHeight="129.0" fitWidth="177.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@assets/fchicken.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Circle fx:id="borderCircle11" centerX="50" centerY="50" fill="transparent" layoutX="10.0" layoutY="10.0" radius="58.0" stroke="#39c113" strokeWidth="4.0" />
+                                 </children>
+                                 <clip>
+                                    <Circle centerX="60" centerY="60" radius="60" />
+                                 </clip>
+                              </AnchorPane>
+                              <Region prefHeight="135.0" prefWidth="54.0" />
+                              <AnchorPane prefHeight="139.0" prefWidth="179.0">
+                                 <children>
+                                    <ImageView fitHeight="158.0" fitWidth="113.0" layoutX="4.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@assets/monggos.jpeg" />
+                                       </image>
+                                    </ImageView>
+                                    <Circle fx:id="borderCircle111" centerX="50" centerY="50" fill="transparent" layoutX="10.0" layoutY="10.0" radius="58.0" stroke="#39c113" strokeWidth="4.0" />
+                                 </children>
+                                 <clip>
+                                    <Circle centerX="60" centerY="60" radius="60" />
+                                 </clip>
+                              </AnchorPane>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="73.0" layoutY="730.0" prefHeight="95.0" prefWidth="446.0">
+                           <children>
+                              <AnchorPane prefHeight="139.0" prefWidth="206.0">
+                                 <children>
+                                    <ImageView fitHeight="135.0" fitWidth="219.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@assets/pchop.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Circle fx:id="borderCircle111" centerX="50" centerY="50" fill="transparent" layoutX="10.0" layoutY="10.0" radius="58.0" stroke="#39c113" strokeWidth="4.0" />
+                                 </children>
+                                 <clip>
+                                    <Circle centerX="60" centerY="60" radius="60" />
+                                 </clip>
+                              </AnchorPane>
+                              <Region prefHeight="159.0" prefWidth="42.0" />
+                              <AnchorPane prefHeight="139.0" prefWidth="179.0">
+                                 <children>
+                                    <ImageView fitHeight="159.0" fitWidth="187.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@assets/karekare.jpg" />
+                                       </image>
+                                    </ImageView>
+                                    <Circle fx:id="borderCircle1111" centerX="50" centerY="50" fill="transparent" layoutX="10.0" layoutY="10.0" radius="58.0" stroke="#39c113" strokeWidth="4.0" />
+                                 </children>
+                                 <clip>
+                                    <Circle centerX="60" centerY="60" radius="60" />
+                                 </clip>
+                              </AnchorPane>
+                           </children>
+                        </HBox>
+                        <VBox alignment="CENTER" layoutX="323.0" layoutY="141.0" prefHeight="87.0" prefWidth="143.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="0.0" prefWidth="143.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="31.0" styleClass="food-buttons" stylesheets="@../emagis/src/main/resources/project/styling.css">
+                                       <graphic>
+                                          <ImageView fitHeight="21.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@assets/minus%20(1).png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <StackPane prefHeight="41.0" prefWidth="28.0">
+                                       <children>
+                                          <Circle fill="DARKBLUE" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                                          <Label style="-fx-font-weight: bold;" text="0" textFill="WHITE" />
+                                       </children>
+                                    </StackPane>
+                                    <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="31.0" styleClass="food-buttons" stylesheets="@../emagis/src/main/resources/project/styling.css">
+                                       <graphic>
+                                          <ImageView fitHeight="21.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@assets/plus.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <Region prefHeight="5.0" prefWidth="143.0" />
+                              <Label styleClass="food-name" stylesheets="@../emagis/src/main/resources/project/styling.css" text="Chicken Curry">
+                                 <font>
+                                    <Font name="Arial Black" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label styleClass="food-text" stylesheets="@../emagis/src/main/resources/project/styling.css" text="₱ 6767676" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="63.0" layoutY="370.0" prefHeight="87.0" prefWidth="143.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="0.0" prefWidth="143.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="31.0" styleClass="food-buttons" stylesheets="@../emagis/src/main/resources/project/styling.css">
+                                       <graphic>
+                                          <ImageView fitHeight="21.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@assets/minus%20(1).png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <StackPane prefHeight="41.0" prefWidth="28.0">
+                                       <children>
+                                          <Circle fill="DARKBLUE" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                                          <Label style="-fx-font-weight: bold;" text="0" textFill="WHITE" />
+                                       </children>
+                                    </StackPane>
+                                    <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="31.0" styleClass="food-buttons" stylesheets="@../emagis/src/main/resources/project/styling.css">
+                                       <graphic>
+                                          <ImageView fitHeight="21.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@assets/plus.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <Region prefHeight="5.0" prefWidth="143.0" />
+                              <Label styleClass="food-name" stylesheets="@../emagis/src/main/resources/project/styling.css" text="Humba">
+                                 <font>
+                                    <Font name="Arial Black" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label styleClass="food-text" stylesheets="@../emagis/src/main/resources/project/styling.css" text="₱ 6767676" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="323.0" layoutY="370.0" prefHeight="87.0" prefWidth="143.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="0.0" prefWidth="143.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="31.0" styleClass="food-buttons" stylesheets="@../emagis/src/main/resources/project/styling.css">
+                                       <graphic>
+                                          <ImageView fitHeight="21.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@assets/minus%20(1).png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <StackPane prefHeight="41.0" prefWidth="28.0">
+                                       <children>
+                                          <Circle fill="DARKBLUE" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                                          <Label style="-fx-font-weight: bold;" text="0" textFill="WHITE" />
+                                       </children>
+                                    </StackPane>
+                                    <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="31.0" styleClass="food-buttons" stylesheets="@../emagis/src/main/resources/project/styling.css">
+                                       <graphic>
+                                          <ImageView fitHeight="21.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@assets/plus.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <Region prefHeight="5.0" prefWidth="143.0" />
+                              <Label styleClass="food-name" stylesheets="@../emagis/src/main/resources/project/styling.css" text="Pork Sisig">
+                                 <font>
+                                    <Font name="Arial Black" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label styleClass="food-text" stylesheets="@../emagis/src/main/resources/project/styling.css" text="₱ 6767676" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="63.0" layoutY="600.0" prefHeight="87.0" prefWidth="143.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="0.0" prefWidth="143.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="31.0" styleClass="food-buttons" stylesheets="@../emagis/src/main/resources/project/styling.css">
+                                       <graphic>
+                                          <ImageView fitHeight="21.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@assets/minus%20(1).png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <StackPane prefHeight="41.0" prefWidth="28.0">
+                                       <children>
+                                          <Circle fill="DARKBLUE" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                                          <Label style="-fx-font-weight: bold;" text="0" textFill="WHITE" />
+                                       </children>
+                                    </StackPane>
+                                    <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="31.0" styleClass="food-buttons" stylesheets="@../emagis/src/main/resources/project/styling.css">
+                                       <graphic>
+                                          <ImageView fitHeight="21.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@assets/plus.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <Region prefHeight="5.0" prefWidth="143.0" />
+                              <Label styleClass="food-name" stylesheets="@../emagis/src/main/resources/project/styling.css" text="Fried Chicken">
+                                 <font>
+                                    <Font name="Arial Black" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label styleClass="food-text" stylesheets="@../emagis/src/main/resources/project/styling.css" text="₱ 6767676" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="323.0" layoutY="600.0" prefHeight="87.0" prefWidth="143.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="0.0" prefWidth="143.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="31.0" styleClass="food-buttons" stylesheets="@../emagis/src/main/resources/project/styling.css">
+                                       <graphic>
+                                          <ImageView fitHeight="21.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@assets/minus%20(1).png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <StackPane prefHeight="41.0" prefWidth="28.0">
+                                       <children>
+                                          <Circle fill="DARKBLUE" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                                          <Label style="-fx-font-weight: bold;" text="0" textFill="WHITE" />
+                                       </children>
+                                    </StackPane>
+                                    <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="31.0" styleClass="food-buttons" stylesheets="@../emagis/src/main/resources/project/styling.css">
+                                       <graphic>
+                                          <ImageView fitHeight="21.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@assets/plus.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <Region prefHeight="5.0" prefWidth="143.0" />
+                              <Label styleClass="food-name" stylesheets="@../emagis/src/main/resources/project/styling.css" text="Ginisang Monggo">
+                                 <font>
+                                    <Font name="Arial Black" size="15.0" />
+                                 </font>
+                              </Label>
+                              <Label styleClass="food-text" stylesheets="@../emagis/src/main/resources/project/styling.css" text="₱ 6767676" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="63.0" layoutY="829.0" prefHeight="87.0" prefWidth="143.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="0.0" prefWidth="143.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="31.0" styleClass="food-buttons" stylesheets="@../emagis/src/main/resources/project/styling.css">
+                                       <graphic>
+                                          <ImageView fitHeight="21.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@assets/minus%20(1).png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <StackPane prefHeight="41.0" prefWidth="28.0">
+                                       <children>
+                                          <Circle fill="DARKBLUE" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                                          <Label style="-fx-font-weight: bold;" text="0" textFill="WHITE" />
+                                       </children>
+                                    </StackPane>
+                                    <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="31.0" styleClass="food-buttons" stylesheets="@../emagis/src/main/resources/project/styling.css">
+                                       <graphic>
+                                          <ImageView fitHeight="21.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@assets/plus.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <Region prefHeight="5.0" prefWidth="143.0" />
+                              <Label styleClass="food-name" stylesheets="@../emagis/src/main/resources/project/styling.css" text="Porkchop">
+                                 <font>
+                                    <Font name="Arial Black" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label styleClass="food-text" stylesheets="@../emagis/src/main/resources/project/styling.css" text="₱ 6767676" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER" layoutX="323.0" layoutY="829.0" prefHeight="87.0" prefWidth="143.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="0.0" prefWidth="143.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="31.0" styleClass="food-buttons" stylesheets="@../emagis/src/main/resources/project/styling.css">
+                                       <graphic>
+                                          <ImageView fitHeight="21.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@assets/minus%20(1).png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <StackPane prefHeight="41.0" prefWidth="28.0">
+                                       <children>
+                                          <Circle fill="DARKBLUE" radius="10.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="2.0" />
+                                          <Label style="-fx-font-weight: bold;" text="0" textFill="WHITE" />
+                                       </children>
+                                    </StackPane>
+                                    <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="31.0" styleClass="food-buttons" stylesheets="@../emagis/src/main/resources/project/styling.css">
+                                       <graphic>
+                                          <ImageView fitHeight="21.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@assets/plus.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <Region prefHeight="5.0" prefWidth="143.0" />
+                              <Label styleClass="food-name" stylesheets="@../emagis/src/main/resources/project/styling.css" text="Kare-Kare">
+                                 <font>
+                                    <Font name="Arial Black" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label styleClass="food-text" stylesheets="@../emagis/src/main/resources/project/styling.css" text="₱ 6767676" />
+                           </children>
+                        </VBox>
                      </children>
                   </AnchorPane>
               </content>
             </ScrollPane>
             <VBox prefHeight="116.0" prefWidth="540.0">
                <children>
-                  <HBox prefHeight="58.0" prefWidth="517.0" style="-fx-background-color: #00008b;" styleClass="header-bar" stylesheets="@styling.css">
+                  <HBox prefHeight="58.0" prefWidth="517.0" style="-fx-background-color: #00008b;" styleClass="header-bar" stylesheets="@../emagis/src/main/resources/project/styling.css">
                      <children>
-                        <Label prefHeight="29.0" prefWidth="104.0" text="E-Magis">
+                        <Label prefHeight="29.0" prefWidth="104.0" stylesheets="@../emagis/src/main/resources/project/styling.css" text="E-Magis">
                            <HBox.margin>
                               <Insets bottom="10.0" left="2.0" right="20.0" top="10.0" />
                            </HBox.margin>
@@ -72,7 +477,7 @@
                            </font>
                         </Label>
                         <Region prefHeight="48.0" prefWidth="171.0" />
-                        <Label prefHeight="28.0" prefWidth="168.0" text="Xavier University">
+                        <Label prefHeight="28.0" prefWidth="168.0" stylesheets="@../emagis/src/main/resources/project/styling.css" text="Xavier University">
                            <HBox.margin>
                               <Insets bottom="10.0" left="25.0" right="2.0" top="10.0" />
                            </HBox.margin>
@@ -88,27 +493,50 @@
                   <Pane prefHeight="6.0" prefWidth="540.0" />
                </children>
             </VBox>
-            <ImageView fitHeight="60.0" fitWidth="64.0" layoutX="453.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@assets/canteen.png" />
-               </image>
-            </ImageView>
-            <Label alignment="CENTER_RIGHT" layoutX="270.0" layoutY="160.0" prefHeight="43.0" prefWidth="233.0" style="-fx-font-weight: bold; -fx-font-size: 30;" styleClass="label-screen" stylesheets="@styling.css" text="Magis Canteen" textFill="#b99433">
+            <Label alignment="CENTER_RIGHT" layoutX="238.0" layoutY="113.0" prefHeight="43.0" prefWidth="233.0" style="-fx-font-weight: bold; -fx-font-size: 30;" styleClass="label-screen" stylesheets="@../../../../../../../../Downloads/styling.css" text="Magis Canteen" textFill="#b99433">
                <font>
                   <Font size="27.0" />
                </font>
             </Label>
-            <Button layoutX="30.0" layoutY="102.0" minHeight="17.0" minWidth="42.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="66.0" styleClass="button-magis" stylesheets="@styling.css">
+            <Circle fill="#bf4013" layoutX="76.0" layoutY="221.0" radius="8.0" stroke="WHITE" strokeType="INSIDE" />
+            <Circle fill="#39c113" layoutX="76.0" layoutY="199.0" radius="8.0" stroke="WHITE" strokeType="INSIDE" />
+            <Label layoutX="91.0" layoutY="189.0" styleClass="simple-text" stylesheets="@../emagis/src/main/resources/project/styling.css" text="Available">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="91.0" layoutY="210.0" styleClass="simple-text" stylesheets="@../emagis/src/main/resources/project/styling.css" text="Unavailable">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="39.0" fitWidth="38.0" layoutX="471.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/canteen.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="30.0" layoutY="116.0" mnemonicParsing="false" onAction="#onBackClick" styleClass="button-return" stylesheets="@stylingCanteen.css">
                <graphic>
-                  <ImageView fitHeight="38.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="102.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@assets/return_but.png" />
+                        <Image url="@assets/back.png" />
                      </image>
                   </ImageView>
                </graphic>
             </Button>
-            <Circle fill="#bf4013" layoutX="65.0" layoutY="218.0" radius="8.0" stroke="WHITE" strokeType="INSIDE" />
-            <Circle fill="#39c113" layoutX="65.0" layoutY="198.0" radius="8.0" stroke="WHITE" strokeType="INSIDE" />
+            <Button alignment="CENTER_RIGHT" layoutX="378.0" layoutY="186.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="48.0" prefWidth="131.0" styleClass="button-return" stylesheets="@../emagis/src/main/resources/project/styling.css">
+               <graphic>
+                  <ImageView fitHeight="36.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assets/shop.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Label layoutX="398.0" layoutY="200.0" prefHeight="21.0" prefWidth="73.0" style="-fx-font-weight: bold;" styleClass="simple-text" stylesheets="@../emagis/src/main/resources/project/styling.css" text="Check-out">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
          </children></Pane>
    </top>
 </BorderPane>

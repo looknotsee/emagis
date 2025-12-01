@@ -72,6 +72,24 @@
     -fx-padding: 5 15 5 15;
 }
 
+.rounded-img-avail{
+    -fx-background-color: white;
+    -fx-border-color: #00ac09;
+    -fx-border-radius: 10;
+    -fx-border-width: 3;
+    -fx-background-radius: 10;
+    -fx-padding: 5 15 5 15;  
+}
+
+.rounded-img-unavail{
+    -fx-background-color: white;
+    -fx-border-color: #ab2000;
+    -fx-border-radius: 10;
+    -fx-border-width: 3;
+    -fx-background-radius: 10;
+    -fx-padding: 5 15 5 15;  
+}
+
 .spinner .increment-arrow-button,
 .spinner .decrement-arrow-button,
 .spinner .increment-arrow,

@@ -7,10 +7,14 @@
 }
 
 .titled-pane {
-    -fx-background-color: "#00008b";
+    -fx-background-color: transparent;
     -fx-border-color:  transparent;
     -fx-background-insets: 0;
     -fx-padding: 0;
+}
+
+.simple-text{
+    -fx-text-fill: #00008b;
 }
 
 .list-view {
@@ -18,6 +22,7 @@
     -fx-background-insets: 0;
     -fx-padding: 0;
 }
+
 
 .text-field-title {
     -fx-text-fill: white;
@@ -45,17 +50,16 @@
     -fx-background-color: transparent;
 }
 
+.button-return{
+    -fx-background-color: transparent;
+}
+
 .button-canteen {
     -fx-background-color: transparent;
 }
 
-.button-return {
-    -fx-border-color:  transparent;
-    -fx-background-color: transparent;
-}
-
 .header-bar {
-    -fx-background-color: #00008b;      /* deep blue */
+    -fx-background-color: #1F4387;      /* deep blue */
     -fx-background-radius: 10;          /* rounded corners */
     -fx-padding: 5 15 5 15;             /* inner spacing */
 }
@@ -65,6 +69,18 @@
     -fx-font-weight: bold;
 }
 
+.food-name{
+    -fx-text-fill: #00008b;
+    -fx-font-weight: bold;
+}
+
+.food-text{
+    -fx-text-fill: #00008b;
+}
+
+.food-buttons{
+    -fx-background-color: transparent;
+}
 
 .balance-header {
     -fx-background-color: #2B5DBD59;
@@ -72,31 +88,4 @@
     -fx-padding: 5 15 5 15;
 }
 
-.rounded-img-avail{
-    -fx-background-color: white;
-    -fx-border-color: #00ac09;
-    -fx-border-radius: 10;
-    -fx-border-width: 3;
-    -fx-background-radius: 10;
-    -fx-padding: 5 15 5 15;  
-}
 
-.rounded-img-unavail{
-    -fx-background-color: white;
-    -fx-border-color: #ab2000;
-    -fx-border-radius: 10;
-    -fx-border-width: 3;
-    -fx-background-radius: 10;
-    -fx-padding: 5 15 5 15;  
-}
-
-.spinner .increment-arrow-button,
-.spinner .decrement-arrow-button,
-.spinner .increment-arrow,
-.spinner .decrement-arrow {
-    -fx-padding: 0;
-    -fx-shape: "";
-    -fx-background-color: transparent;
-    -fx-pref-width: 0;
-    -fx-max-width: 0;
-}
