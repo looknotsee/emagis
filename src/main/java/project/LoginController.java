@@ -44,14 +44,18 @@ public class LoginController {
             return;
         }
 
-    boolean success = authDB.login(id, pin);
+    UserAccount user = authDB.login(id, pin);
 
-    if (success) {
+    if (user != null) {
+        Session.setCurrentUser(user);
         try {
             App.setRoot("home");
         } catch (IOException e) {
             e.printStackTrace();
-       }
+            errorLabel.setText("Failed to load into homescreen.");
+            errorLabel.setVisible(true);
+        }
+        
     } else {
         errorLabel.setText("Invalid ID Number or PIN.");
         errorLabel.setVisible(true);

@@ -1,85 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="342.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1">
-   <left>
-      <Pane prefHeight="566.0" prefWidth="342.0" stylesheets="@../../../../../../../magis/src/main/java/com/example/magis/styling.css" BorderPane.alignment="CENTER">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="960.0" prefWidth="540.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <Pane prefHeight="246.0" prefWidth="540.0" BorderPane.alignment="CENTER">
          <children>
-            <Button layoutX="69.0" layoutY="162.0" minWidth="36.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="36.0" styleClass="button-magis" stylesheets="@../../../../../../../magis/src/main/java/com/example/magis/styling.css" />
-            <Button layoutX="219.0" layoutY="162.0" minWidth="36.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="36.0" styleClass="button-magis" stylesheets="@../../../../../../../magis/src/main/java/com/example/magis/styling.css" />
-            <Button layoutX="14.0" layoutY="61.0" minHeight="17.0" minWidth="42.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="42.0" styleClass="button-return" stylesheets="@../../../../../../../magis/src/main/java/com/example/magis/styling.css">
-               <graphic>
-                  <ImageView fitHeight="23.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../../../arrow_back_1000dp_000080_FILL0_wght400_GRAD0_opsz48.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
-            <TextField alignment="TOP_RIGHT" disable="true" layoutX="109.0" layoutY="86.0" styleClass="label-screen" stylesheets="@../../../../../../../magis/src/main/java/com/example/magis/styling.css" text="Magis Canteen" />
-            <ImageView fitHeight="33.0" fitWidth="30.0" layoutX="298.0" layoutY="54.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../../../menu_book_2_1000dp_000080_FILL0_wght400_GRAD0_opsz48.png" />
-               </image>
-            </ImageView>
-            <ScrollPane fitToWidth="true" hbarPolicy="NEVER" layoutY="137.0" prefHeight="463.0" prefWidth="342.0" styleClass="anchored-pane-magis" stylesheets="@../../../../../../../magis/src/main/java/com/example/magis/styling.css" vbarPolicy="AS_NEEDED">
+            <ScrollPane fitToWidth="true" hbarPolicy="NEVER" layoutY="246.0" prefHeight="890.0" prefWidth="540.0" styleClass="anchored-pane-magis" stylesheets="@styling.css" vbarPolicy="AS_NEEDED">
               <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="715.0" prefWidth="356.0" styleClass="anchored-pane-magis" stylesheets="@../../../../../../../magis/src/main/java/com/example/magis/styling.css">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="752.0" prefWidth="525.0" styleClass="anchored-pane-magis" stylesheets="@styling.css">
                      <children>
-                        <Pane layoutX="51.0" layoutY="47.0" prefHeight="90.0" prefWidth="103.0" styleClass="pane-foodlist" stylesheets="@../../../../../../../magis/src/main/java/com/example/magis/styling.css">
+                        <Pane layoutX="34.0" layoutY="47.0" prefHeight="90.0" prefWidth="103.0" styleClass="pane-foodlist" stylesheets="@styling.css" />
+                        <HBox layoutX="77.0" layoutY="33.0" prefHeight="131.0" prefWidth="384.0">
                            <children>
-                              <Label layoutX="19.0" layoutY="37.0" styleClass="label-food" text="Pork Adobo" />
-                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="39.0" layoutY="59.0" styleClass="label-price" text="P 80" />
-                           </children></Pane>
-                        <ImageView id="adobo1" fitHeight="61.0" fitWidth="94.0" layoutX="73.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../../../filipino-pork-adobo-scaled.jpg" />
-                           </image>
-                           <clip>
-                              <Circle centerX="30" centerY="30" radius="30" />
-                           </clip>
-                        </ImageView>
-                        <Circle fx:id="borderCircle" centerX="50" centerY="50" fill="transparent" layoutX="53.0" layoutY="-3.0" radius="31.0" stroke="#00ac09" strokeWidth="4.0" />
-                        <Pane layoutX="183.0" layoutY="47.0" prefHeight="90.0" prefWidth="103.0" styleClass="pane-foodlist" stylesheets="@../../../../../../../magis/src/main/java/com/example/magis/styling.css">
-                           <children>
-                              <Label layoutX="13.0" layoutY="37.0" styleClass="label-food" text="Chicken Curry" />
-                              <Label alignment="CENTER" contentDisplay="CENTER" layoutX="39.0" layoutY="59.0" styleClass="label-price" text="P 85" />
+                              <StackPane prefHeight="94.0" prefWidth="128.0">
+                                 <children>
+                                    <ImageView id="adobo1" fitHeight="131.0" fitWidth="130.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@assets/adobo.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                 <clip>
+                                    <Circle centerX="50" centerY="50" radius="50" />
+                                 </clip>
+                              </StackPane>
+                              <Region prefHeight="131.0" prefWidth="143.0" />
+                              <StackPane prefHeight="94.0" prefWidth="128.0">
+                                 <clip>
+                                    <Circle centerX="65" centerY="65" radius="65" />
+                                 </clip>
+                                 <children>
+                                    <ImageView id="adobo1" fitHeight="131.0" fitWidth="130.0" pickOnBounds="true">
+                                       <image>
+                                          <Image url="@assets/adobo.jpg" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </StackPane>
                            </children>
-                        </Pane>
-                        <ImageView id="curry" fitHeight="95.0" fitWidth="69.0" layoutX="205.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@assets/curry.jpg" />
-                           </image>
-                           <clip>
-                              <Circle centerX="30" centerY="30" radius="30" />
-                           </clip>
-                        </ImageView>
-                        <Circle fx:id="borderCircle1" centerX="50" centerY="50" fill="transparent" layoutX="185.0" layoutY="-2.0" radius="31.0" stroke="#ab2000" strokeWidth="4.0" />
+                        </HBox>
+                        <Circle fx:id="borderCircle" centerX="50" centerY="50" fill="transparent" layoutX="92.0" layoutY="48.0" radius="67.0" stroke="#39c113" strokeWidth="4.0" />
                      </children>
                   </AnchorPane>
               </content>
             </ScrollPane>
-            <Circle fill="#00ac09" layoutX="37.0" layoutY="106.0" radius="5.0" stroke="WHITE" strokeType="INSIDE" />
-            <Pane layoutY="13.0" prefHeight="28.0" prefWidth="342.0" style="-fx-background-color: #283971;">
+            <VBox prefHeight="116.0" prefWidth="540.0">
                <children>
-                  <Label layoutX="14.0" layoutY="6.0" styleClass="label-emagis" text="E-Magis" />
-                  <Label alignment="CENTER_RIGHT" layoutX="241.0" layoutY="6.0" styleClass="label-emagis" text="Xavier University" />
+                  <HBox prefHeight="58.0" prefWidth="517.0" style="-fx-background-color: #00008b;" styleClass="header-bar" stylesheets="@styling.css">
+                     <children>
+                        <Label prefHeight="29.0" prefWidth="104.0" text="E-Magis">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="2.0" right="20.0" top="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                        <Region prefHeight="48.0" prefWidth="171.0" />
+                        <Label prefHeight="28.0" prefWidth="168.0" text="Xavier University">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="25.0" right="2.0" top="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="15.0" left="30.0" right="30.0" top="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Pane prefHeight="6.0" prefWidth="540.0" />
                </children>
-            </Pane>
-            <Circle fill="#ab2000" layoutX="37.0" layoutY="120.0" radius="5.0" stroke="WHITE" strokeType="INSIDE" />
-            <Label layoutX="50.0" layoutY="100.0" styleClass="label-legend" text="Available" />
-            <Label layoutX="50.0" layoutY="113.0" styleClass="label-legend" text="Not Available" />
-         </children>
-      </Pane>
-   </left>
+            </VBox>
+            <ImageView fitHeight="60.0" fitWidth="64.0" layoutX="453.0" layoutY="99.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assets/canteen.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER_RIGHT" layoutX="270.0" layoutY="160.0" prefHeight="43.0" prefWidth="233.0" style="-fx-font-weight: bold; -fx-font-size: 30;" styleClass="label-screen" stylesheets="@styling.css" text="Magis Canteen" textFill="#b99433">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <Button layoutX="30.0" layoutY="102.0" minHeight="17.0" minWidth="42.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="66.0" styleClass="button-magis" stylesheets="@styling.css">
+               <graphic>
+                  <ImageView fitHeight="38.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assets/return_but.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Circle fill="#bf4013" layoutX="65.0" layoutY="218.0" radius="8.0" stroke="WHITE" strokeType="INSIDE" />
+            <Circle fill="#39c113" layoutX="65.0" layoutY="198.0" radius="8.0" stroke="WHITE" strokeType="INSIDE" />
+         </children></Pane>
+   </top>
 </BorderPane>
