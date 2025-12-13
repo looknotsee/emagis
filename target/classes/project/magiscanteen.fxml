@@ -92,7 +92,7 @@
                                     <Font name="Arial Black" size="20.0" />
                                  </font>
                               </Label>
-                              <Label styleClass="food-text" stylesheets="@../emagis/src/main/resources/project/styling.css" text="₱ 6767676" />
+                              <Label fx:id="pricePorkAdobo" styleClass="food-text" stylesheets="@../emagis/src/main/resources/project/styling.css" text="₱ 6767676" />
                            </children>
                         </VBox>
                         <HBox layoutX="73.0" layoutY="270.0" prefHeight="95.0" prefWidth="446.0">
@@ -224,7 +224,7 @@
                                     <Font name="Arial Black" size="18.0" />
                                  </font>
                               </Label>
-                              <Label styleClass="food-text" stylesheets="@../emagis/src/main/resources/project/styling.css" text="₱ 6767676" />
+                              <Label fx:id="priceChickenCurry" styleClass="food-text" stylesheets="@../emagis/src/main/resources/project/styling.css" text="₱ 6767676" />
                            </children>
                         </VBox>
                         <VBox alignment="CENTER" layoutX="63.0" layoutY="370.0" prefHeight="87.0" prefWidth="143.0">
@@ -263,7 +263,7 @@
                                     <Font name="Arial Black" size="20.0" />
                                  </font>
                               </Label>
-                              <Label styleClass="food-text" stylesheets="@../emagis/src/main/resources/project/styling.css" text="₱ 6767676" />
+                              <Label fx:id="priceHumba" styleClass="food-text" stylesheets="@../emagis/src/main/resources/project/styling.css" text="₱ 6767676" />
                            </children>
                         </VBox>
                         <VBox alignment="CENTER" layoutX="323.0" layoutY="370.0" prefHeight="87.0" prefWidth="143.0">
@@ -302,7 +302,7 @@
                                     <Font name="Arial Black" size="20.0" />
                                  </font>
                               </Label>
-                              <Label styleClass="food-text" stylesheets="@../emagis/src/main/resources/project/styling.css" text="₱ 6767676" />
+                              <Label fx:id="pricePorkSisig" styleClass="food-text" stylesheets="@../emagis/src/main/resources/project/styling.css" text="₱ 6767676" />
                            </children>
                         </VBox>
                         <VBox alignment="CENTER" layoutX="63.0" layoutY="600.0" prefHeight="87.0" prefWidth="143.0">
@@ -341,7 +341,7 @@
                                     <Font name="Arial Black" size="18.0" />
                                  </font>
                               </Label>
-                              <Label styleClass="food-text" stylesheets="@../emagis/src/main/resources/project/styling.css" text="₱ 6767676" />
+                              <Label fx:id="priceFriedChicken" styleClass="food-text" stylesheets="@../emagis/src/main/resources/project/styling.css" text="₱ 6767676" />
                            </children>
                         </VBox>
                         <VBox alignment="CENTER" layoutX="323.0" layoutY="600.0" prefHeight="87.0" prefWidth="143.0">
@@ -380,7 +380,7 @@
                                     <Font name="Arial Black" size="15.0" />
                                  </font>
                               </Label>
-                              <Label styleClass="food-text" stylesheets="@../emagis/src/main/resources/project/styling.css" text="₱ 6767676" />
+                              <Label fx:id="priceGinisangMonggo" styleClass="food-text" stylesheets="@../emagis/src/main/resources/project/styling.css" text="₱ 6767676" />
                            </children>
                         </VBox>
                         <VBox alignment="CENTER" layoutX="63.0" layoutY="829.0" prefHeight="87.0" prefWidth="143.0">
@@ -419,7 +419,7 @@
                                     <Font name="Arial Black" size="20.0" />
                                  </font>
                               </Label>
-                              <Label styleClass="food-text" stylesheets="@../emagis/src/main/resources/project/styling.css" text="₱ 6767676" />
+                              <Label fx:id="pricePorkchop" styleClass="food-text" stylesheets="@../emagis/src/main/resources/project/styling.css" text="₱ 6767676" />
                            </children>
                         </VBox>
                         <VBox alignment="CENTER" layoutX="323.0" layoutY="829.0" prefHeight="87.0" prefWidth="143.0">
@@ -464,7 +464,7 @@
                                     <Font name="Arial Black" size="20.0" />
                                  </font>
                               </Label>
-                              <Label styleClass="food-text" stylesheets="@../emagis/src/main/resources/project/styling.css" text="₱ 6767676" />
+                              <Label fx:id="priceKarekare" styleClass="food-text" stylesheets="@../emagis/src/main/resources/project/styling.css" text="₱ 6767676" />
                            </children>
                         </VBox>
                      </children>
@@ -531,7 +531,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="checkoutButton" alignment="CENTER_RIGHT" layoutX="378.0" layoutY="186.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" prefHeight="48.0" prefWidth="131.0" onAction="#onCheckoutClick" styleClass="button-return" stylesheets="@../emagis/src/main/resources/project/styling.css">
+            <Button fx:id="checkoutButton" alignment="CENTER_RIGHT" layoutX="378.0" layoutY="186.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#onCheckoutClick" prefHeight="48.0" prefWidth="131.0" styleClass="button-return" stylesheets="@../emagis/src/main/resources/project/styling.css">
                <graphic>
                   <ImageView fitHeight="36.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
                      <image>

@@ -33,7 +33,6 @@ public class App extends Application {
     }
 
     private static Parent loadFXML(String fxml) throws IOException {
-        // FXML files are placed under resources/project/, so load them with an absolute path
         FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource("/project/" + fxml + ".fxml"));
         return fxmlLoader.load();
     }

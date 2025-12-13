@@ -35,6 +35,15 @@ public class MagiscanteenController {
     @FXML private Label qtyPorkchop;
     @FXML private Label qtyKarekare;
 
+    @FXML private Label pricePorkAdobo;
+    @FXML private Label priceChickenCurry;
+    @FXML private Label priceHumba;
+    @FXML private Label pricePorkSisig;
+    @FXML private Label priceFriedChicken;
+    @FXML private Label priceGinisangMonggo;
+    @FXML private Label pricePorkchop;
+    @FXML private Label priceKarekare;
+
     @FXML private Button checkoutButton;
 
 
@@ -63,6 +72,16 @@ public class MagiscanteenController {
 
         if (qtyKarekare != null) qtyKarekare.setUserData(karekare);
         else System.err.println("Warning: qtyKarekare not injected (null)");
+
+        
+        if (pricePorkAdobo != null) pricePorkAdobo.setText(String.format("₱ %.2f", porkAdobo.getProductPrice()));
+        if (priceChickenCurry != null) priceChickenCurry.setText(String.format("₱ %.2f", chickenCurry.getProductPrice()));
+        if (priceHumba != null) priceHumba.setText(String.format("₱ %.2f", humba.getProductPrice()));
+        if (pricePorkSisig != null) pricePorkSisig.setText(String.format("₱ %.2f", porkSisig.getProductPrice()));
+        if (priceFriedChicken != null) priceFriedChicken.setText(String.format("₱ %.2f", friedChicken.getProductPrice()));
+        if (priceGinisangMonggo != null) priceGinisangMonggo.setText(String.format("₱ %.2f", ginisangMonggo.getProductPrice()));
+        if (pricePorkchop != null) pricePorkchop.setText(String.format("₱ %.2f", porkchop.getProductPrice()));
+        if (priceKarekare != null) priceKarekare.setText(String.format("₱ %.2f", karekare.getProductPrice()));
     }
 
     @FXML

@@ -14,6 +14,7 @@ import project.core.App;
 import project.core.CartItem;
 import project.core.Product;
 import project.core.ShoppingCart;
+import project.service.CheckoutService;
 import project.service.Session;
 
 public class CheckoutController {
@@ -27,6 +28,7 @@ public class CheckoutController {
 
     private final ShoppingCart cart = Session.getCart();
     private final ObservableList<CartItem> tableData = FXCollections.observableArrayList();
+    private final CheckoutService checkoutService = new CheckoutService();
 
     @FXML
     public void initialize() {
@@ -122,8 +124,27 @@ public class CheckoutController {
 
     @FXML
     private void onConfirmClick() {
-        System.out.println("Purchased! Total = " + cart.getTotal());
-        cart.clear();
-        refreshTable();
+        // perform checkout using CheckoutService which interacts with the user's wallet
+        var user = Session.getCurrentUser();
+        if (user == null) {
+            javafx.scene.control.Alert a = new javafx.scene.control.Alert(javafx.scene.control.Alert.AlertType.ERROR, "No user logged in.");
+            a.showAndWait();
+            return;
+        }
+
+        boolean ok = checkoutService.checkout(user);
+        javafx.scene.control.Alert a = new javafx.scene.control.Alert(ok ? javafx.scene.control.Alert.AlertType.INFORMATION : javafx.scene.control.Alert.AlertType.ERROR,
+                ok ? "Purchase successful." : "Purchase failed (insufficient balance or empty cart).");
+        a.showAndWait();
+
+        if (ok) {
+            // refresh the view (cart cleared by service)
+            refreshTable();
+            try {
+                App.setRoot("home2");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }
 }
