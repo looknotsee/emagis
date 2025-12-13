@@ -88,4 +88,7 @@
     -fx-padding: 5 15 5 15;
 }
 
+.button {
+    -fx-cursor: hand;
+}
 

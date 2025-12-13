@@ -61,12 +61,14 @@ public class HomeController {
         }
     }
 
-     @FXML
+    @FXML
     public void onBookClick() {
         try {
             App.setRoot("bookcenter");
+            System.out.println("went to book");
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
 }

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="960.0" prefWidth="540.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="project.controller.CheckoutController">
+
+   <!-- HEADER / TOP AREA -->
+   <top>
+      <Pane fx:id="centerPane" prefHeight="246.0" prefWidth="540.0" stylesheets="@stylingCanteen.css" BorderPane.alignment="CENTER">
+         <children>
+
+            <!-- HEADER BAR -->
+            <VBox prefHeight="116.0" prefWidth="540.0">
+               <children>
+                  <HBox prefHeight="58.0" prefWidth="517.0" style="-fx-background-color: #00008b;" styleClass="header-bar" stylesheets="@../emagis/src/main/resources/project/styling.css">
+                     <children>
+                        <Label prefHeight="29.0" prefWidth="104.0" stylesheets="@../emagis/src/main/resources/project/styling.css" text="E-Magis">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="2.0" right="20.0" top="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                        <Region prefHeight="48.0" prefWidth="171.0" />
+                        <Label prefHeight="28.0" prefWidth="168.0" stylesheets="@../emagis/src/main/resources/project/styling.css" text="Xavier University">
+                           <HBox.margin>
+                              <Insets bottom="10.0" left="25.0" right="2.0" top="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="15.0" left="30.0" right="30.0" top="20.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <Pane prefHeight="6.0" prefWidth="540.0" />
+               </children>
+            </VBox>
+
+            <!-- PAGE TITLE: CHECKOUT -->
+            <Label alignment="CENTER_RIGHT" layoutX="103.0" layoutY="154.0" prefHeight="43.0" prefWidth="233.0" style="-fx-font-weight: bold; -fx-font-size: 30;" styleClass="label-screen" stylesheets="@../../../../../../../../Downloads/styling.css" text="Checkout" textFill="#b99433">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+
+            <!-- BACK BUTTON -->
+            <Button layoutX="30.0" layoutY="116.0" mnemonicParsing="false" onAction="#onBackClick" styleClass="button-return" stylesheets="@stylingCanteen.css">
+               <graphic>
+                  <ImageView fitHeight="102.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assets/back.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+
+         </children>
+      </Pane>
+   </top>
+
+   <!-- CENTER: CART TABLE -->
+   <center>
+      <TableView fx:id="cartTable" prefHeight="600.0" prefWidth="540.0" BorderPane.alignment="CENTER">
+         <columns>
+            <TableColumn fx:id="colItem" prefWidth="220.0" text="Item" />
+            <TableColumn fx:id="colPrice" prefWidth="100.0" text="Price" />
+            <TableColumn fx:id="colQty" prefWidth="120.0" text="Qty" />
+            <TableColumn fx:id="colSubtotal" prefWidth="100.0" text="Subtotal" />
+         </columns>
+      </TableView>
+   </center>
+
+   <!-- BOTTOM: TOTAL + BUTTONS -->
+   <bottom>
+   <VBox alignment="CENTER_RIGHT" spacing="10.0" BorderPane.alignment="CENTER">
+      <padding>
+         <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+      </padding>
+
+      <!-- TOTAL ROW -->
+      <HBox alignment="CENTER_RIGHT" spacing="10.0">
+         <Label style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Total:" />
+         <Label fx:id="lblTotal" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+      </HBox>
+
+      <!-- BUTTONS ROW -->
+      <HBox alignment="CENTER_RIGHT" spacing="10.0">
+         <Button onAction="#onBackClick" text="Back" />
+         <Button onAction="#onConfirmClick" style="-fx-background-color: #4CAF50; -fx-text-fill: white;" text="Confirm Purchase" />
+      </HBox>
+
+   </VBox>
+</bottom>
+</BorderPane>

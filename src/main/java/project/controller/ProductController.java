@@ -32,7 +32,7 @@ public class ProductController {
     private void onAddCartClick() {
         int qty = QtySpinner.getValue();
         ShoppingCart cart = currentUser.getCart();
-        cart.addOrUpdate(product, qty);
+        cart.add(product, qty);
     }
 }
 

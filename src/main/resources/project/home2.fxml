@@ -62,7 +62,7 @@
                         </Label>
                      </children>
                   </VBox>
-                  <ButtonBar prefHeight="124.0" prefWidth="159.0" style="-fx-background-color: 00008b;">
+                  <ButtonBar prefHeight="124.0" prefWidth="159.0" style="-fx-background-color: #d4ebf2;">
                      <HBox.margin>
                         <Insets />
                      </HBox.margin>
@@ -85,7 +85,7 @@
                   <VBox prefHeight="152.0" prefWidth="302.0">
                      <children>
                         <Label />
-                        <Button fx:id="canteenButton" mnemonicParsing="false" onAction="#onCanteenClick" prefHeight="68.0" prefWidth="64.0" style="-fx-background-color: transparnt;" styleClass="button-magis" stylesheets="@styling.css" textFill="#bc0000">
+                        <Button fx:id="canteenButton" mnemonicParsing="false" onAction="#onCanteenClick" prefHeight="68.0" prefWidth="64.0" style="-fx-background-color: transparent;" styleClass="button-magis" stylesheets="@styling.css" textFill="#bc0000">
                            <VBox.margin>
                               <Insets left="100.0" right="20.0" />
                            </VBox.margin>

@@ -15,7 +15,7 @@
 
 .title-text{
     -fx-text-fill: #b99433;
-    -fx-font-weight: bold;s
+    -fx-font-weight: bold;
 }
 
 .simple-text{
@@ -99,4 +99,6 @@
     -fx-padding: 5 15 5 15;
 }
 
-
+.button {
+    -fx-cursor: hand;
+}

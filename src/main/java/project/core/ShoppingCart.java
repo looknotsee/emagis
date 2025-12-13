@@ -1,46 +1,42 @@
 package project.core;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Collection;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 public class ShoppingCart {
-    private final List<CartItem> items = new ArrayList<>();
+    private final Map<String, CartItem> items = new LinkedHashMap<>();
 
-    public List<CartItem> getItems() {
-        return items;
-    }
+    public void add(Product product, int delta) {
+        CartItem existing = items.get(product.getProductID());
+        int newQty = (existing == null ? 0 : existing.getQuantity()) + delta;
 
-    //polymorphism, product can either be canteenitem or bookcentitem
-    public void addOrUpdate(Product product, int quantity) {
-        for (CartItem ci : items) {
-            if (ci.getProduct().getProductID().equals(product.getProductID())) {
-                if (quantity <= 0) {
-                    items.remove(ci);
-                } else {
-                    ci.setQuantity(quantity);
-                }
-                return;
+        if (newQty <= 0) {
+            items.remove(product.getProductID());
+        } else {
+            if (existing == null) {
+                items.put(product.getProductID(), new CartItem(product, newQty));
+            } else {
+                existing.setQuantity(newQty);
             }
         }
-
-        if (quantity > 0) {
-            items.add(new CartItem(product, quantity));
-        }
     }
 
-    public void clear() {
-        items.clear();
+    public Collection<CartItem> getItems() {
+        return items.values();
     }
 
     public double getTotal() {
-        double total = 0.00;
-        for (CartItem ci : items) {
-            total += ci.getSubTotal();
-        }
-        return total;
+        return items.values().stream()
+                .mapToDouble(CartItem::getSubTotal)
+                .sum();
     }
 
     public boolean isEmpty() {
         return items.isEmpty();
+    }
+
+    public void clear() {
+        items.clear();
     }
 }

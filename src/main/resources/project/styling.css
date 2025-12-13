@@ -37,7 +37,7 @@
     -fx-background-radius: 30;
     -fx-border-radius: 30;
     -fx-border-color:  transparent;
-    -fx-text-font: "Arial";
+    -fx-font: 14px "Arial";
     -fx-font-color: white;
 }
 
@@ -55,7 +55,7 @@
 }
 
 .header-bar {
-    -fx-background-color: #00008b;      /* deep blue */
+    -fx-background-color: #3333e494;      /* deep blue */
     -fx-background-radius: 10;          /* rounded corners */
     -fx-padding: 5 15 5 15;             /* inner spacing */
 }
@@ -99,4 +99,8 @@
     -fx-background-color: transparent;
     -fx-pref-width: 0;
     -fx-max-width: 0;
+}
+
+.button {
+    -fx-cursor: hand;
 }
